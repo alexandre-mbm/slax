@@ -2,6 +2,8 @@
 
 # TODO validate pwd HERE
 
+mkdir -p /tmp/sbdev
+
 CHDIR="/var/run/initramfs/memory/changes"
 
 find $CHDIR > /tmp/sbdev/changes
@@ -29,6 +31,8 @@ case $1 in
     ;;
   make)
     PKG=$(pwd | sed "s/^.*\/\([^\/]*\)$/\1/")  # TODO refactoring out here
+    rm $PKG.tar.gz
+    rm $PKG.sb
     tar -czf $PKG.tar.gz -T sel
     mkdir -p /tmp/sbdev/sb
     tar -xzf $PKG.tar.gz -C /tmp/sbdev/sb

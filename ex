@@ -1,6 +1,7 @@
 
 .*~
 .*\.lock
+.*squashfs-root.*
 /
 /root
 /root/.config
@@ -10,6 +11,7 @@
 /root/.fluxbox/lastwallpaper
 /root/.fluxbox/menu_resolution
 /root/.fehbg
+/root/.nano
 /root/.sbdev/.*.sb
 /root/.sbdev/.*.tar.gz
 /root/.Xauthority
